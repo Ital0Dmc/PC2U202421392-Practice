@@ -1,4 +1,4 @@
-package pe.com.aseguramed.platform.u202421392.insurance.domain.commands;
+package pe.com.aseguramed.platform.u202421392.insurance.domain.model.commands;
 
 import pe.com.aseguramed.platform.u202421392.insurance.domain.model.enums.PolicyStatus;
 
