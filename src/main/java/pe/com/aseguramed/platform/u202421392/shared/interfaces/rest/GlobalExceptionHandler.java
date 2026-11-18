@@ -1,6 +1,5 @@
-// CAMBIAR: fitclub por el nombre del caso (pe.com.<caso>.platform.u202421392)
-package pe.com.aseguramed.platform.u202421392.shared.interfaces.rest;
-/*
+package pe.com.aseguramed.platform.u202421392.shared.interfaces.rest;// CAMBIAR: fitclub por el nombre del caso (pe.com.<caso>.platform.u202421392)
+
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
@@ -9,9 +8,9 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 // CAMBIAR: fitclub por el caso, fitness por el BC y Membership por el aggregate
-import pe.com.fitclub.platform.u202421392.fitness.domain.exceptions.MembershipAlreadyExistsException;
+import pe.com.aseguramed.platform.u202421392.insurance.domain.exceptions.HealthPolicyAlreadyExistsException;
 // CAMBIAR: fitclub por el nombre del caso
-import pe.com.fitclub.platform.u202421392.shared.interfaces.rest.resources.MessageResource;
+import pe.com.aseguramed.platform.u202421392.shared.interfaces.rest.resources.MessageResource;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -23,8 +22,8 @@ public class GlobalExceptionHandler {
     }
 
     // CAMBIAR: Membership por el aggregate (en las 2 líneas de abajo)
-    @ExceptionHandler(MembershipAlreadyExistsException.class)
-    public ResponseEntity<MessageResource> handleAlreadyExists(MembershipAlreadyExistsException ex) {
+    @ExceptionHandler(HealthPolicyAlreadyExistsException.class)
+    public ResponseEntity<MessageResource> handleAlreadyExists(HealthPolicyAlreadyExistsException ex) {
         return buildResponse(HttpStatus.CONFLICT, ex.getMessage());
     }
 
@@ -43,4 +42,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(status).body(new MessageResource(message));
     }
 }
-*/
+
