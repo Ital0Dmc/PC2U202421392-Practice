@@ -1,6 +1,6 @@
 // CAMBIAR: fitclub por el nombre del caso (pe.com.<caso>.platform.u202421392)
 package pe.com.aseguramed.platform.u202421392.shared.interfaces.rest;
-
+/*
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
@@ -43,3 +43,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(status).body(new MessageResource(message));
     }
 }
+*/

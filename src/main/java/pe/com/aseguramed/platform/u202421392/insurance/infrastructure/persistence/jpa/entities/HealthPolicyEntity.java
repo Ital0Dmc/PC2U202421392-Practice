@@ -1,8 +1,6 @@
 package pe.com.aseguramed.platform.u202421392.insurance.infrastructure.persistence.jpa.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import pe.com.aseguramed.platform.u202421392.insurance.domain.model.aggregates.HealthPolicy;
 import pe.com.aseguramed.platform.u202421392.insurance.domain.model.enums.PolicyStatus;
 import pe.com.aseguramed.platform.u202421392.insurance.domain.model.valueobjects.PartyId;
@@ -30,6 +28,7 @@ public class HealthPolicyEntity extends AuditableAbstractAggregateRoot<HealthPol
     @Column(nullable = true)
     private String  coverageDetails;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private PolicyStatus status;
 
